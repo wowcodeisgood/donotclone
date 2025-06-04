@@ -42,6 +42,21 @@ Warning: Pyleecan is not yet compatible with Python 3.11 due to PySide2. We plan
 - Notches (Yoke and Bore) / Uneven Bore or Yoke shape (compatible with slot/notches) / Machine with more than 2 laminations
 Examples can be found in the [gallery](https://pyleecan.org/gallery.html).
 
+### PMSM Genetic Optimization Example
+
+To experiment with the optimization capabilities, run the example script
+`examples/pmsm_genetic_opt.py`.  The script loads a machine description from
+`pyleecan/Data/Machine/IPMSM_B.json` by default and applies a genetic algorithm
+to adjust rotor and stator outer radii.  You can provide an alternative machine
+file with the `--json-path` argument:
+
+```bash
+python examples/pmsm_genetic_opt.py --json-path /path/to/IPMSM_B.json
+```
+
+The script prints the initial dimensions and the best result after a small
+number of generations.
+
 If you are interested by a topology or a specific model, you can [open an issue](https://github.com/Eomys/pyleecan/issues) or a [discussion](https://github.com/Eomys/pyleecan/discussions) on this Github repository to talk about it. We will gladly explain how to develop it yourself or we will add it to the development list. We are always looking for experimental data and model validation based on the last scientific research work. 
 Even if you don't have time to work on pyleecan, sharing your expertise will be valued by the community. 
 
